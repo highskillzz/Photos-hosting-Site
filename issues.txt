@@ -1,0 +1,5 @@
+do the changes in the new.ejs in views
+
+Implement the routes for the login and register routes
+
+Change the route in the index.js in the routes

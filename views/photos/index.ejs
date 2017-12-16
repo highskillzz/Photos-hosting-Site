@@ -1,0 +1,44 @@
+<% include ../partials/header%>
+   
+    
+
+
+
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Welcome</h1>
+                
+                <p>
+                    <a class="btn btn-lg btn-primary" href="/photos/new">Add a new photo</a>
+                </p>
+
+            </div>
+        </header>
+
+
+        <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+            <% photos.forEach(function(photo){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="<%=photo.image%>" alt="Photo image">
+                        <div class="caption ">
+                            <h4>
+                                <%=photo.name%>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <%  }); %>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <%include ../partials/footer%>
