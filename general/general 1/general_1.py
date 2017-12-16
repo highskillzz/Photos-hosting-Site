@@ -40,7 +40,11 @@ message = "Sample python message"
 
 for row in rows:
 # sending the mail
+<<<<<<< HEAD
     s.sendmail("saivicky2015@gmail.com", row, message)
+=======
+    s.sendmail("bhaveshdevjani14@gmail.com", row, message)
+>>>>>>> 48171244d75c9aca9b44e14214a8a208fd0c2908
  
 # terminating the session
 s.quit()
