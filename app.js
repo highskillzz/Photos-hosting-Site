@@ -66,6 +66,12 @@ app.use("/",indexRoutes);
 app.get('/', function (req, res) {
     res.render("login");
 });
+
+app.get('/photos/new', middleware.isLoggedIn, function (req, res) {
+    res.render("photos/new.ejs");
+});
+
+
 app.get("/photos/:id", function (req, res) {
    Photo.find({},function(err,photos){
     if(err)
@@ -105,9 +111,7 @@ app.post('/photos', middleware.isLoggedIn, function (req, res) {
 
 });
 
-app.get('/photos/new', middleware.isLoggedIn, function (req, res) {
-    res.render("photos/new.ejs");
-});
+
 
 
 
