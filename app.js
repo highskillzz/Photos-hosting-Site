@@ -72,14 +72,14 @@ app.get('/photos/new', middleware.isLoggedIn, function (req, res) {
 });
 
 
-app.get("/photos/:id", function (req, res) {
+app.get("/photos/:id",middleware.isLoggedIn ,function (req, res) {
    Photo.find({},function(err,photos){
     if(err)
     console.log(err);
     else{
         var x=[];
         photos.forEach(function(photo){
-            if(photo.author.id==req.user._id){
+            if(photo.author.id.equals(req.user._id)){
                 x.push(photo);
             }
     });
