@@ -43,7 +43,7 @@ router.post('/login',passport.authenticate("local",{
 router.get('/logout', function(req, res) {
     req.logout();
     req.flash("success","Logged Out!!");
-    res.redirect("/photos");
+    res.redirect("/login");
 });
 
 // function isLoggedIn(req,res,next){
